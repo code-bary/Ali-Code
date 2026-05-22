@@ -1,0 +1,11 @@
+/* App-specific styles - minimal to avoid conflicts with Tailwind */
+
+/* Smooth transitions for editor state */
+* {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}

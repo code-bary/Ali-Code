@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply bg-black text-text-primary font-sans antialiased;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  html, body, #root {
+    @apply w-full h-full;
+  }
+}
+
+@layer components {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #464647 transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-editor-line hover:bg-editor-darker rounded;
+  }
+
+  .editor-scroll {
+    @apply scrollbar-thin overflow-y-auto;
+  }
+
+  .tab-active {
+    @apply bg-editor-bg border-b-2 border-accent-green-bright;
+  }
+
+  .tab-inactive {
+    @apply bg-editor-darker border-b border-editor-line hover:bg-editor-bg;
+  }
+
+  .icon-hover {
+    @apply transition-colors duration-200;
+  }
+
+  .icon-hover:hover {
+    @apply text-accent-green-bright;
+  }
+
+  .glass-effect {
+    @apply bg-black/40 backdrop-blur-sm border border-editor-line;
+  }
+
+  .editor-border {
+    @apply border border-editor-line;
+  }
+}
+
+.terminal-scroll::-webkit-scrollbar {
+  @apply w-2;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+  @apply bg-editor-line hover:bg-text-muted rounded;
+}
